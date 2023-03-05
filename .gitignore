@@ -1,5 +1,5 @@
-# Created by https://www.toptal.com/developers/gitignore/api/node,rust,go,csharp,kotlin,python
-# Edit at https://www.toptal.com/developers/gitignore?templates=node,rust,go,csharp,kotlin,python
+# Created by https://www.toptal.com/developers/gitignore/api/go,node,rust,csharp,kotlin,python,haskell
+# Edit at https://www.toptal.com/developers/gitignore?templates=go,node,rust,csharp,kotlin,python,haskell
 
 ### Csharp ###
 ## Ignore Visual Studio temporary files, build results, and
@@ -31,7 +31,7 @@ x86/
 [Aa][Rr][Mm]/
 [Aa][Rr][Mm]64/
 bld/
-**/[Bb]in/
+[Bb]in/
 [Oo]bj/
 [Ll]og/
 [Ll]ogs/
@@ -422,6 +422,31 @@ FodyWeavers.xsd
 # Go workspace file
 go.work
 
+### Haskell ###
+dist
+dist-*
+cabal-dev
+*.o
+*.hi
+*.hie
+*.chi
+*.chs.h
+*.dyn_o
+*.dyn_hi
+.hpc
+.hsenv
+.cabal-sandbox/
+cabal.sandbox.config
+*.prof
+*.aux
+*.hp
+*.eventlog
+.stack-work/
+cabal.project.local
+cabal.project.local~
+.HTF/
+.ghc.environment.*
+
 ### Kotlin ###
 # Compiled class file
 *.class
@@ -537,7 +562,6 @@ out
 
 # Nuxt.js build / generate output
 .nuxt
-dist
 
 # Gatsby files
 .cache/
@@ -763,7 +787,7 @@ Cargo.lock
 
 # MSVC Windows builds of rustc generate these, which store debugging information
 
-# End of https://www.toptal.com/developers/gitignore/api/node,rust,go,csharp,kotlin,python
+# End of https://www.toptal.com/developers/gitignore/api/go,node,rust,csharp,kotlin,python,haskell
 
 # Ignore Exercism documentation and configuration files
 **/.editorconfig
