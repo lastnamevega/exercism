@@ -1,3 +1,9 @@
-export function flatten(/* Parameters go here */) {
-  throw new Error('Remove this statement and implement this function')
+import * as _ from 'lodash';
+
+type Numbers = (number | Numbers | undefined)[];
+
+export function flatten(numbers: Numbers): number[] {
+  return _.flattenDeep(numbers).filter(
+    (element) => typeof element === 'number'
+  ) as number[];
 }
