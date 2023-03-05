@@ -1,0 +1,30 @@
+#! /usr/bin/env sh
+
+set -x
+set -e
+
+NAME="$1"
+EMAIL="$2"
+TOKEN="$3"
+
+if command -v apk; then
+    sudo apk update \
+        && sudo apk add bash curl git jq tar vim wget
+else
+    sudo apt-get update \
+        && sudo apt-get install -y bash curl git jq tar vim wget
+fi
+
+git config --global user.name "$NAME" \
+    && git config --global user.email "$EMAIL"
+
+if ! command -v exercism; then
+    wget -O exercism.tar.gz https://github.com/exercism/cli/releases/download/v3.1.0/exercism-3.1.0-linux-x86_64.tar.gz \
+        && tar -xf exercism.tar.gz \
+        && rm exercism.tar.gz \
+        && mkdir -p ~/.local/bin \
+        && mv exercism ~/.local/bin/
+fi
+
+exercism configure -t "$TOKEN" \
+    && exercism configure -w /workspaces/exercism
