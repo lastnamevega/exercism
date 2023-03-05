@@ -15,6 +15,7 @@
     "@exercism/babel-preset-typescript": "^0.1.0",
     "@exercism/eslint-config-typescript": "^0.4.1",
     "@types/jest": "^27.4.0",
+    "@types/lodash": "^4.14.191",
     "@types/node": "^16.11.24",
     "babel-jest": "^27.5.1",
     "core-js": "^3.21.0",
@@ -27,5 +28,8 @@
     "lint": "yarn lint:types && yarn lint:ci",
     "lint:types": "yarn tsc --noEmit -p .",
     "lint:ci": "eslint . --ext .tsx,.ts"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21"
   }
 }

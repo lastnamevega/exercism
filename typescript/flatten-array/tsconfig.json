@@ -11,18 +11,16 @@
     // high, and babel will make sure it runs on your local Node version.
     // https://babeljs.io/docs/en/
     "target": "ESNext", // ESLint doesn't support this yet: "es2022",
-
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-
     // Because we'll be using babel: ensure that Babel can safely transpile
     // files in the TypeScript project.
     //
     // https://babeljs.io/docs/en/babel-plugin-transform-typescript/#caveats
-    "isolatedModules": true
+    "isolatedModules": true,
+    "moduleResolution": "node"
   },
-  "include": ["*.ts", "*.tsx", ".meta/*.ts", ".meta/*.tsx"],
-  "exclude": ["node_modules"]
+  "include": ["*.ts", "*.tsx", ".meta/*.ts", ".meta/*.tsx"]
 }
